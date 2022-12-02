@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-  reactStrictMode: true,
-}
+const nextConfig = {
+  output: "standalone",
+  experimental: {
+    appDir: true,
+  },
+};
+
+module.exports = nextConfig;
