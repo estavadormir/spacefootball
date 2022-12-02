@@ -1,27 +1,34 @@
-# Next.js + Tailwind CSS Example
+Spacefootball challenge
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Using NextJS13 with experimental App dir with Tailwind and in Typescript
+- Used this palette https://colorhunt.co/palette/dddddd22283130475ef05454
+- used @tailwindcss/forms 
+- used https://github.com/iuccio/CSVtoJSON to read from CSV
 
-## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+To run it with docker do the following:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+cd to the folder
 
-## How to use
+docker build -t spacefootball .
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+docker run -p 3000:3000 spacefootball
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+Otherwise:
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+npm run build
+npm run start
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+or if you'd like to tweak this
+
+npm run dev
+
+
+Left to do:
+- a 404 page
+- make use of NextJS layouts https://nextjs.org/blog/next-13#layouts
+- Hover effect on table headers
+- Assign random images to clubs
+- a search functionality (by club and player)
+- implement tests
